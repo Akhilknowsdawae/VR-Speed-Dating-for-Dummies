@@ -19,7 +19,7 @@ public class DateTriggers : MonoBehaviour
     void Start()
     {
         teleportSpots.SetActive(false);
-        dateUI_A.SetActive(true);
+        dateUI_A.SetActive(false);
         dateUI_B.SetActive(false);
         GoToFirstDate(); //for testing TODO
 
@@ -55,13 +55,13 @@ public class DateTriggers : MonoBehaviour
         {
             case 1:
                 newPos = new Vector3(-1.45299995f, -6.69899988f, 3.78800011f);
-                dateUI_A.SetActive(true);
+                //dateUI_A.SetActive(true);
                 activeUI = dateUI_A;
                 break;
 
             case 2:
                 newPos = new Vector3(3f, -6.69899988f, 3.78800011f);
-                dateUI_B.SetActive(true);
+                //dateUI_B.SetActive(true);
                 activeUI = dateUI_B;
                 break;
                 //add more for dates 3 and 4 TODO

@@ -111,5 +111,5 @@ public class DateDialogue : MonoBehaviour
         return variableValue;
     }
     //When we need to get the score later, use some variant of this
-    //int dateAScore = ((Ink.Runtime.IntValue)DateDialogue.GetInstance().GetVariableState("dateAScore")).value;
+    //int dateAScore = ((Ink.Runtime.IntValue)dateUI_A.GetComponent<DateDialogue>().GetVariableState("dateAScore")).value;
 }
