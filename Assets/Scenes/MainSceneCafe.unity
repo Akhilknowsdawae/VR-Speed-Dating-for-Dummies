@@ -12242,6 +12242,18 @@ MonoBehaviour:
   choices:
   - {fileID: 1325946603}
   - {fileID: 101951291}
+  globalsInkFile:
+    inkAsset: {fileID: 102900000, guid: 7567fa75d42f4934a8eba3b5c70f669c, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
 --- !u!1001 &819908405
 PrefabInstance:
   m_ObjectHideFlags: 0
