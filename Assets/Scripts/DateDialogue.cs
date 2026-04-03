@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
+using Ink.UnityIntegration;
 
 public class DateDialogue : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class DateDialogue : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
+    private DialogueVariables dialogueVariables;
+    [SerializeField] private InkFile globalsInkFile;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,18 +32,24 @@ public class DateDialogue : MonoBehaviour
         {
             choicesText[index++] = choice.GetComponentInChildren<TextMeshProUGUI>();
         }
+        //int dateAScore = ((Ink.Runtime.IntValue)GetVariableState("test")).value;
+        //Debug.Log("DATE A SCORE IS " + dateAScore);
+        //string testString = ((Ink.Runtime.StringValue)GetVariableState("testString")).value;
+        //Debug.Log("TEST STRING IS " + testString);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
     }
 
     public void StartDialogue()
     {
         currentStory = new Story(inkJSON.text);
         dialoguePanel.SetActive(true);
+
+        dialogueVariables.StartListening(currentStory);
+
         ContinueDialogue();
     }
 
@@ -56,6 +66,7 @@ public class DateDialogue : MonoBehaviour
             //do exit stuff here TODO
             dialogueText.text = "END OF DIALOGUE";
             Debug.Log("End of dialogue!");
+            dialogueVariables.StopListening(currentStory); //if another exit function, put this there instead
         }
     }
 
@@ -88,4 +99,17 @@ public class DateDialogue : MonoBehaviour
         ContinueDialogue();
         //currentStory.MakeChoice(choiceIndex);
     }
+
+    public Ink.Runtime.Object GetVariableState(string variableName)
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null)
+        {
+            Debug.LogWarning("Ink var " + variableName + " was null!");
+        }
+        return variableValue;
+    }
+    //When we need to get the score later, use some variant of this
+    //int dateAScore = ((Ink.Runtime.IntValue)DateDialogue.GetInstance().GetVariableState("dateAScore")).value;
 }

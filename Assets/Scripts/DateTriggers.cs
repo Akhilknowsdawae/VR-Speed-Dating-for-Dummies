@@ -22,6 +22,9 @@ public class DateTriggers : MonoBehaviour
         dateUI_A.SetActive(true);
         dateUI_B.SetActive(false);
         GoToFirstDate(); //for testing TODO
+
+        //int dateAScore = ((Ink.Runtime.IntValue)dateUI_A.GetComponent<DateDialogue>().GetVariableState("dateAScore")).value;
+        //Debug.LogError("DATE A SCORE IS " + dateAScore);
     }
 
     // Update is called once per frame
