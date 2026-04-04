@@ -1,3 +1,5 @@
 VAR dateAScore = 0
-VAR test = 23
-VAR testString = "TEST"
+VAR dateBScore = 0
+VAR dateCScore = 0
+VAR dateDScore = 0
+VAR hostIntroComplete = false
