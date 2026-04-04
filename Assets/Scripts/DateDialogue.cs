@@ -12,6 +12,7 @@ public class DateDialogue : MonoBehaviour
 
 
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject continueBtn;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextAsset inkJSON;
     private Story currentStory;
@@ -21,21 +22,26 @@ public class DateDialogue : MonoBehaviour
 
     private DialogueVariables dialogueVariables;
     [SerializeField] private InkFile globalsInkFile;
+    [SerializeField] private GameObject VROrigin;
 
     // Start is called before the first frame update
     void Start()
     {
         StartDialogue();
-        choicesText = new TextMeshProUGUI[choices.Length];
-        int index = 0;
-        foreach (GameObject choice in choices)
-        {
-            choicesText[index++] = choice.GetComponentInChildren<TextMeshProUGUI>();
-        }
-        //int dateAScore = ((Ink.Runtime.IntValue)GetVariableState("test")).value;
-        //Debug.Log("DATE A SCORE IS " + dateAScore);
-        //string testString = ((Ink.Runtime.StringValue)GetVariableState("testString")).value;
-        //Debug.Log("TEST STRING IS " + testString);
+
+        //choicesText = new TextMeshProUGUI[choices.Length];
+        //int index = 0;
+        //foreach (GameObject choice in choices)
+        //{
+        //    choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();            
+        //    Debug.Log(choicesText.Length);
+        //    //Debug.Log("Populating " + choice.name + " with " + choicesText[index]);
+        //    index++;
+        //}
+        //LOOK I DON'T KNOW WHY
+        //BUT THIS NULLIFIES choicesText SOMETIME AFTER THIS. DRIVING ME INSANE
+        //so. I have moved this whole function to the displaychoices func
+        //load-bearing coconut i guess
     }
 
     void Awake()
@@ -60,32 +66,141 @@ public class DateDialogue : MonoBehaviour
         {
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
+            CheckForTags();
         }
         else
-        {
-            //do exit stuff here TODO
-            dialogueText.text = "END OF DIALOGUE";
-            Debug.Log("End of dialogue!");
+        {            
+            Debug.LogError("End of dialogue!");            
             dialogueVariables.StopListening(currentStory); //if another exit function, put this there instead
+        }
+        
+    }
+
+    private void CheckForTags()
+    {
+        foreach (string tag in currentStory.currentTags)
+        {
+            Debug.Log("Found tag " + tag);
+
+            switch (tag) {
+
+                case "goToDateA":
+            
+                    Debug.Log("Going to first date!");
+                    if(VROrigin != null)
+                    {
+                        dialogueVariables.StopListening(currentStory);
+                        VROrigin.GetComponent<DateTriggers>().GoToFirstDate();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("VR Origin is null idiot");
+                    }
+                    break;
+
+                case "goToDateB":
+            
+                    Debug.Log("Going to second date!");
+                    if (VROrigin != null)
+                    {
+                        dialogueVariables.StopListening(currentStory);
+                        VROrigin.GetComponent<DateTriggers>().GoToSecondDate();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("VR Origin is null idiot");
+                    }
+                    break;
+
+                case "goToDateC":
+                    Debug.Log("Going to third date!");
+                    if (VROrigin != null)
+                    {
+                        dialogueVariables.StopListening(currentStory);
+                        VROrigin.GetComponent<DateTriggers>().GoToThirdDate();
+                    }
+                    else
+                    {
+                        dialogueVariables.StopListening(currentStory);
+                        Debug.LogWarning("VR Origin is null idiot");
+                    }
+                    break;
+
+                case "goToDateD":
+                    Debug.Log("Going to fourth date!");
+                    if (VROrigin != null)
+                    {
+                        VROrigin.GetComponent<DateTriggers>().GoToFourthDate();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("VR Origin is null idiot");
+                    }
+                    break;
+
+                case "goToHost":
+            
+                    Debug.Log("Going to host!");
+                    if (VROrigin != null)
+                    {
+                        VROrigin.GetComponent<DateTriggers>().GoToHost();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("VR Origin is null idiot");
+                    }
+                    break;
+
+                case "closeHostDialogue":
+
+                    Debug.Log("Closing host dialogue!");
+                    gameObject.SetActive(false);
+                    break;
+
+                case "rose":
+
+                    Debug.Log("Rose!");
+                    VROrigin.GetComponent<DateTriggers>().teleportSpots.SetActive(true);
+                    break;
+            }
         }
     }
 
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
+        if (currentChoices.Count > 0)
+        {
+            continueBtn.SetActive(false);
+        }
+        else
+        {
+            continueBtn.SetActive(true);
+        }
 
         if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError("Too many choices ("+currentChoices.Count +")for current UI.");
+            Debug.LogError("Too many choices (" + currentChoices.Count + ")for current UI.");
         }
 
+        //Being load-bearing coconut
+        choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
-        foreach (Choice choice in currentChoices)
+        foreach (GameObject choice in choices)
         {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            //Debug.Log(choicesText.Length);
+            //Debug.Log("Populating " + choice.name + " with " + choicesText[index]);
+            index++;
+        }
+        //end load-bearing coconut
+
+        index = 0;
+        foreach (Choice choice in currentChoices)
+        {            
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
-            Debug.Log("CHOICE: " +choice.text +", IDX:" +choice.index);
         }
         for (int i = index; i< choices.Length; i++)
         {
