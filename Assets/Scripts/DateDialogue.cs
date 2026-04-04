@@ -23,6 +23,7 @@ public class DateDialogue : MonoBehaviour
     private DialogueVariables dialogueVariables;
     [SerializeField] private InkFile globalsInkFile;
     [SerializeField] private GameObject VROrigin;
+    [SerializeField] private GameObject npc;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +82,17 @@ public class DateDialogue : MonoBehaviour
         foreach (string tag in currentStory.currentTags)
         {
             Debug.Log("Found tag " + tag);
+
+            // Handle animation tags
+            if (tag.StartsWith("anim"))
+            {
+                int index = int.Parse(tag.Substring(4));
+                if (npc != null && npc.GetComponent<NPCAnimations>() != null)
+                {
+                    npc.GetComponent<NPCAnimations>().PlayAnimation(index);
+                }
+                continue; // Skip the switch for animation tags
+            }
 
             switch (tag) {
 

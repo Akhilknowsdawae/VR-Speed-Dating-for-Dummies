@@ -1,53 +1,53 @@
 INCLUDE Globals.ink
 
-#sittingTalking
+#anim1
 So... just making conversation here... you haven’t happened to see any suspicious individuals?
 Maybe tall, dramatic... possibly evil?
 + [Nope.]
 ~dateBScore++
-#sittingTalking
+#anim1
 -- Good. That’s good. Because I am definitely not conducting any sort of investigation.
 -- Just a regular civilian enjoying beverages.
 ->Round2
 
 + [Why are you asking?]
 ~dateBScore--
-#sittingDisbelief
+#anim2
 -- Why? I- what? No reason.
-#sittingTalking
+#anim1
 -- Curiosity is a normal human trait.
 ->Round2
 
 ==Round2
 + [You’re a cop.]
 ~dateBScore--
-#sittingLaughing
+#anim3
 -- Haha! No badge, no paperwork, no authority whatsoever.
-#sittingTalking
+#anim1
 -- Unless... hypothetically. You've seen anyone suspicious here?
 -> Round3
 
 + [I might’ve seen someone...]
 ~dateBScore++
-#sittingTalking
+#anim1
 --  Describe them. Slowly. With detail.
 -> Round3
 
 ==Round3
 + [Dramatic. Evil laugh.]
 ~dateBScore++
-#sittingFistpump
+#anim4
 -- That’s EXACTLY who I’m-  I mean... who I’ve heard about.
 -> Proceed
 
 + [Never mind.]
 ~dateBScore--
-#sittingDisbelief
+#anim2
 -- You’re withholding information. That’s... suspicious.
 -> Proceed
 
 ==Proceed
-#sittingTalking
+#anim1
 -- Thank you, civ- er, friend. Run along now.
 -- Debug! Score is {dateBScore}!
 #goToDateC

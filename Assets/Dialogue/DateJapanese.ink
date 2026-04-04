@@ -5,25 +5,25 @@ INCLUDE Globals.ink
 
 + [こんにちは！]
 ~dateDScore++
-#sittingTalking
+#anim1
 -- おお！日本語が話せるんですね！
 ->Round2
 
 + [I don’t understand...]
 ~dateDScore--
-#sittingTalking
+#anim1
 -- えっ？
 ->Round2
 
 ==Round2
 + [*Gesture politely*]
 ~dateDScore++
-#sittingLaugh
+#anim3
 -- いいですね！楽しい！
 ->Round3
 
 + [Uh, English?]
-#sittingTalking
+#anim1
 ~dateDScore--
 -- ...Hello. Coffee good?
 ->Round3
@@ -32,19 +32,19 @@ INCLUDE Globals.ink
 ==Round3
 + [*Smile and nod*]
 ~dateDScore++
-#sittingLaugh
+#anim3
 --楽しかったです！
 ->Proceed
 
 + [*Panic*]
 ~dateDScore--
-#sittingDisbelief
+#anim2
 --大丈夫ですか？！
 ->Proceed
 
 
 ==Proceed
-#sittingTalking
+#anim1
 -- Debug! Score is {dateDScore}!
 #goToHost
 ->END

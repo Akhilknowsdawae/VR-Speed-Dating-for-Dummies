@@ -5,15 +5,15 @@ INCLUDE Globals.ink
  
 + [Are you a villain?]
 ~dateCScore++
-#sittingLaugh
+#anim3
 -- HAHAHA - no. Of course not.
-#sittingTalking
+#anim1
 -- But if I were, you would already be too late to stop me.
 ->Round2
 
 + [Hey.]
 ~dateCScore--
-#sittingDisbelief
+#anim2
 -- ..."Hey"?
 -- You respond to destiny with "hey"?
 ->Round2
@@ -21,32 +21,32 @@ INCLUDE Globals.ink
 ==Round2
 + [What are you planning?]
 ~dateCScore++
-#sittingTalking
+#anim1
 -- Phase one is already complete. Phase two begins soon.
 -- You’re sitting at the center of it.
 ->Round3
 
 + [Nice weather.]
 ~dateCScore--
-#sittingDisbelief
+#anim2
 -- Weather is irrelevant to power!
 ->Round3
 
 ==Round3
 + [Should I be worried?]
 ~dateCScore--
-#sittingLaugh
+#anim3
 -- Worried? No. Honored.
 ->Proceed
 
 + [Can I join?]
 ~dateCScore++
-#sittingFistPump
+#anim34
 -- YES! A recruit who understands greatness!
 ->Proceed
 
 ==Proceed
-#sittingTalking
+#anim1
 -- Soon. Soon you will learn of my machinations.
 -- Until then... Anticipate me!
 -- Debug! Score is {dateCScore}!

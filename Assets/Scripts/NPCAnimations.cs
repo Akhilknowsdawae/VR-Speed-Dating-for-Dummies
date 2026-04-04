@@ -8,7 +8,7 @@ public class NPCAnimations : MonoBehaviour
     public Animator animatorOverride;   // Inspector slot
 
     private Animator anim;
-    private const float blendSpeed = 5f; // higher = faster blend
+    private const float blendSpeed = 0.5f; // higher = faster blend
 
     private float[] targetWeights = new float[6]; // 0 unused, layers 1–5
     private float playTimer = 0f;
@@ -53,10 +53,18 @@ public class NPCAnimations : MonoBehaviour
 
             if (playTimer <= 0f)
             {
-                // Blend out the active animation
-                targetWeights[activeLayer] = 0f;
+                // Blend out the active animation and return to base layer idle
+                ResetOverlayLayers();
                 activeLayer = -1;
             }
+        }
+    }
+
+    private void ResetOverlayLayers()
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+            targetWeights[i] = 0f;
         }
     }
 
@@ -74,6 +82,15 @@ public class NPCAnimations : MonoBehaviour
     {
         if (anim == null) return;
 
+        // Special case: force idle by clearing all overlay layers
+        if (layerIndex == 0)
+        {
+            ResetOverlayLayers();
+            activeLayer = -1;
+            playTimer = 0f;
+            return;
+        }
+
         // Blend out any currently active animation
         if (activeLayer != -1)
             targetWeights[activeLayer] = 0f;
@@ -84,13 +101,16 @@ public class NPCAnimations : MonoBehaviour
         for (int i = 1; i <= 4; i++)
             targetWeights[i] = (i == layerIndex) ? 1f : 0f;
 
-        // Get the animation clip for this layer
-        AnimationClip clip = anim.runtimeAnimatorController.animationClips[layerIndex - 1];
-
-        // Always play once
-        clip.wrapMode = WrapMode.Once;
-
-        // Set timer to clip length
-        playTimer = clip.length;
+        // Get the animation clip for this layer, if available
+        var clips = anim.runtimeAnimatorController.animationClips;
+        if (layerIndex - 1 >= 0 && layerIndex - 1 < clips.Length)
+        {
+            AnimationClip clip = clips[layerIndex - 1];
+            playTimer = clip.length;
+        }
+        else
+        {
+            playTimer = 0.5f; // fallback duration
+        }
     }
 }

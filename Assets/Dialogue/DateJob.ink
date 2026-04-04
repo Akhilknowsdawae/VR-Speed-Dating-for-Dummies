@@ -4,18 +4,18 @@ INCLUDE Globals.ink
 Thank you for taking the time to meet with me today. I believe I’d be an excellent fit for this... position.
 
 + [This isn’t a job interview...]
-#sittingDisbelief
+#anim2
 -- ...I’m sorry, this isn’t an interview?
-#sittingTalking
+#anim1
 -- Then why is there a table, structured seating, and emotional stakes?
 ~dateAScore -=1
 
 -> Round2
 
 + [Go on.]
-#sittingFistpump
+#anim4
 -- Fantastic. I appreciate the opportunity.
-#SittingTalking
+#anim1
 -- I would describe myself as highly motivated and results-driven in interpersonal environments.
 ~dateAScore +=1
 -> Round2
@@ -23,37 +23,36 @@ Thank you for taking the time to meet with me today. I believe I’d be an excel
 == Round2
 
 + [What are your strengths?]
-#sittingTalking
+#anim1
 --  I maintain strong eye contact, I listen actively, and I can sustain conversations for extended periods without noticeable discomfort.
 ~dateAScore +=1
 ->Round3
 
 + [What are your weaknesses?]
-#sittingDisbelief
+#anim2
 -- I... occasionally overanalyze emotional responses.
-#sittingTalking
+#anim1
 -- Also, I prepared a spreadsheet for this interaction.
 ~dateAScore-=1
 ->Round3
 
 ==Round3
 + [Why should I pick you?]
-#sittingFistpump
+#anim4
 -- Because I will exceed expectations and deliver consistent emotional performance.
 ~dateAScore +=1
 ->Proceed
 
 + [Do you even like me?]
-#sittingDisbelief
+#anim2
 -- ...I had not factored personal affection into the evaluation criteria.
-#sittingTalking
 -- But I am open to adjusting my approach.
 
 -> Proceed
 
 
 ==Proceed
-#sittingTalking
+#anim1
 -- Thank you for taking the time to meet with me today.
 -- I hope your other meetings are as informative as this one.
 -- Debug! Score is {dateAScore}!
