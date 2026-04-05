@@ -36,7 +36,7 @@ public class DialogueVariables
         story.variablesState.variableChangedEvent -= VariableChanged;
     }
 
-    private void VariableChanged(string name, Ink.Runtime.Object value)
+    public void VariableChanged(string name, Ink.Runtime.Object value)
     {
         Debug.Log("Variable changed: " + name + " => " +value);
         if (variables.ContainsKey(name))

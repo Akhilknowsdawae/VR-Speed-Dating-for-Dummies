@@ -24710,6 +24710,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 1267655770}
+--- !u!114 &1267655773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267655769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0c6cf7300c1264a977363bc23f31e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rose: {fileID: 0}
 --- !u!1 &1269095868
 GameObject:
   m_ObjectHideFlags: 0
@@ -26885,6 +26898,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4621681264212919554, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1267655772}
+    - targetCorrespondingSourceObject: {fileID: 4621681264212919554, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1267655773}
   m_SourcePrefab: {fileID: 100100000, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
 --- !u!4 &1331768997 stripped
 Transform:
