@@ -13,8 +13,10 @@ public class DateDialogue : MonoBehaviour
 
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject continueBtn;
-    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] public TextMeshProUGUI dialogueText;
     [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private TextAsset successInkJSON;
+    [SerializeField] private TextAsset failureInkJSON;
     private Story currentStory;
 
     [SerializeField] private GameObject[] choices;
@@ -22,12 +24,17 @@ public class DateDialogue : MonoBehaviour
 
     private DialogueVariables dialogueVariables;
     [SerializeField] private InkFile globalsInkFile;
-    [SerializeField] private GameObject VROrigin;
+    [SerializeField] public GameObject VROrigin;
     [SerializeField] private GameObject npc;
+    [SerializeField] private GameObject rose;
+    public bool successState;
+    public bool failureState;
 
     // Start is called before the first frame update
     void Start()
     {
+        successState = false;
+        failureState = false;
         StartDialogue();
 
         //choicesText = new TextMeshProUGUI[choices.Length];
@@ -52,7 +59,11 @@ public class DateDialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        currentStory = new Story(inkJSON.text);
+        if(successState)
+            currentStory = new Story(successInkJSON.text);
+        else if(failureState)
+            currentStory = new Story(failureInkJSON.text);
+        else currentStory = new Story(inkJSON.text);
         dialoguePanel.SetActive(true);
 
         dialogueVariables.StartListening(currentStory);
@@ -142,6 +153,7 @@ public class DateDialogue : MonoBehaviour
                     Debug.Log("Going to fourth date!");
                     if (VROrigin != null)
                     {
+                        dialogueVariables.StopListening(currentStory);
                         VROrigin.GetComponent<DateTriggers>().GoToFourthDate();
                     }
                     else
@@ -155,6 +167,7 @@ public class DateDialogue : MonoBehaviour
                     Debug.Log("Going to host!");
                     if (VROrigin != null)
                     {
+                        dialogueVariables.StopListening(currentStory);
                         VROrigin.GetComponent<DateTriggers>().GoToHost();
                     }
                     else
@@ -173,6 +186,16 @@ public class DateDialogue : MonoBehaviour
 
                     Debug.Log("Rose!");
                     VROrigin.GetComponent<DateTriggers>().teleportSpots.SetActive(true);
+                    rose.SetActive(true);
+                    break;
+                
+                case "failure":
+                    Debug.Log("Trigger Failure!");
+                    VROrigin.GetComponent<LevelManager>().GoToFailureScene();
+                    break;
+
+                case "success":
+                    VROrigin.GetComponent<LevelManager>().GoToSuccessScene();
                     break;
             }
         }
@@ -237,6 +260,7 @@ public class DateDialogue : MonoBehaviour
         }
         return variableValue;
     }
+
     //When we need to get the score later, use some variant of this
     //int dateAScore = ((Ink.Runtime.IntValue)dateUI_A.GetComponent<DateDialogue>().GetVariableState("dateAScore")).value;
 }
