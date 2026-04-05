@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class TeleportAreas : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,6 +12,8 @@ public class TeleportAreas : MonoBehaviour
     public GameObject User;
     private GameObject TeleportArea;
     private float distThreshold = 3f;
+    [SerializeField] private Material glowMaterial;
+    [SerializeField] private Material unglowMaterial;
     void Start()
     {
         TeleportArea = gameObject;
@@ -18,6 +22,17 @@ public class TeleportAreas : MonoBehaviour
             User = GameObject.Find("Main Camera");
             
         }
+        gameObject.GetComponent<MeshRenderer>().material = unglowMaterial;
+    }
+
+    public void EnableSpotGlow()
+    {
+        gameObject.GetComponent<MeshRenderer>().material = glowMaterial;
+    }
+
+    public void DisableSpotGlow()
+    {
+        gameObject.GetComponent<MeshRenderer>().material = unglowMaterial;
     }
 
     // Update is called once per frame

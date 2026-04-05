@@ -24,6 +24,7 @@ public class DateDialogue : MonoBehaviour
     [SerializeField] private InkFile globalsInkFile;
     [SerializeField] private GameObject VROrigin;
     [SerializeField] private GameObject npc;
+    [SerializeField] private GameObject rose;
 
     // Start is called before the first frame update
     void Start()
@@ -173,6 +174,7 @@ public class DateDialogue : MonoBehaviour
 
                     Debug.Log("Rose!");
                     VROrigin.GetComponent<DateTriggers>().teleportSpots.SetActive(true);
+                    rose.SetActive(true);
                     break;
             }
         }

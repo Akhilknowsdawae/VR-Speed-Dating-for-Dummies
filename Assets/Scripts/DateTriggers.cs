@@ -83,7 +83,7 @@ public class DateTriggers : MonoBehaviour
                 break;
 
             case 2:
-                newPos = new Vector3(5.5f, -6.69899988f, 3.78800011f);
+                newPos = new Vector3(5.1f, -6.69899988f, 3.79f);
                 newRot = 270f;
                 activeUI = dateUI_B;
                 break;
