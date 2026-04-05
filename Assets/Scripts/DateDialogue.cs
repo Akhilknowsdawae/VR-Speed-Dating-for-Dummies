@@ -13,7 +13,7 @@ public class DateDialogue : MonoBehaviour
 
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject continueBtn;
-    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] public TextMeshProUGUI dialogueText;
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] private TextAsset successInkJSON;
     [SerializeField] private TextAsset failureInkJSON;

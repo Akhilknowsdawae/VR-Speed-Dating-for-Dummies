@@ -8,6 +8,14 @@ public class collisionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name == "coffeeCup")
+        {
+            Debug.Log(gameObject.name + " was hit by coffee! ");
+            other.gameObject.SetActive(false);
+            GameObject usingUI = gameObject.transform.GetChild(0).gameObject;
+            DateDialogue ddScript = usingUI.GetComponent<DateDialogue>();
+            ddScript.dialogueText.text = "Ouch! That coffee is hot!";
+        }
         if (other.gameObject == rose)
         {
             Debug.Log(gameObject.name + " was hit by rose! ");

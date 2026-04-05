@@ -1,5 +1,6 @@
-…You’ve selected me?
-I—thank you for this opportunity. I will not disappoint.
 #anim4
-I look forward to exceeding expectations in this relationship.
+After careful evaluation of this opportunity...
+I’m pleased to accept!
+#anim1
+You will receive my onboarding availability shortly.
 #success
