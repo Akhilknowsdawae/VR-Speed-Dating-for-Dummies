@@ -13,7 +13,7 @@ public class FloatingRose : MonoBehaviour
     {
         floatVal = 0f;
         increment = 0.0005f;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void RoseGrabbed()

@@ -413,6 +413,8 @@ MonoBehaviour:
   continueBtn: {fileID: 40158260}
   dialogueText: {fileID: 420206840}
   inkJSON: {fileID: 4900000, guid: eeb3eadba3d95bc44b43193df31a178b, type: 3}
+  successInkJSON: {fileID: 0}
+  failureInkJSON: {fileID: 0}
   choices:
   - {fileID: 928475112}
   - {fileID: 1295887906}
@@ -431,6 +433,8 @@ MonoBehaviour:
   VROrigin: {fileID: 1140705087}
   npc: {fileID: 1195218809}
   rose: {fileID: 235784922}
+  successState: 0
+  failureState: 0
 --- !u!224 &11713000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8677,6 +8681,8 @@ MonoBehaviour:
   continueBtn: {fileID: 51745524}
   dialogueText: {fileID: 1254003614}
   inkJSON: {fileID: 4900000, guid: 33439f66cf4a7234ab56d0e1d75ac768, type: 3}
+  successInkJSON: {fileID: 0}
+  failureInkJSON: {fileID: 0}
   choices:
   - {fileID: 348982171}
   - {fileID: 811098400}
@@ -8695,6 +8701,8 @@ MonoBehaviour:
   VROrigin: {fileID: 1140705087}
   npc: {fileID: 964303492}
   rose: {fileID: 0}
+  successState: 0
+  failureState: 0
 --- !u!224 &427933051
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9190,7 +9198,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5433683329835409336, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 2054816420}
     - targetCorrespondingSourceObject: {fileID: 6211797501005089021, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
       insertIndex: -1
@@ -16290,6 +16298,8 @@ MonoBehaviour:
   continueBtn: {fileID: 573434764}
   dialogueText: {fileID: 1536922714}
   inkJSON: {fileID: 4900000, guid: 95ba8ccaa71322e418493c45d866dceb, type: 3}
+  successInkJSON: {fileID: 4900000, guid: f20577f9ba46247428c3b63d31bf1a18, type: 3}
+  failureInkJSON: {fileID: 4900000, guid: aa2b2f1cf6cb8574181fdce126652736, type: 3}
   choices:
   - {fileID: 1325946603}
   - {fileID: 101951291}
@@ -16308,6 +16318,8 @@ MonoBehaviour:
   VROrigin: {fileID: 1140705087}
   npc: {fileID: 1267655769}
   rose: {fileID: 235784922}
+  successState: 0
+  failureState: 0
 --- !u!1001 &807898947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18933,7 +18945,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5433683329835409336, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1611433991}
     - targetCorrespondingSourceObject: {fileID: 2724636084078490385, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
       insertIndex: -1
@@ -20200,7 +20212,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5433683329835409336, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 427933051}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4621681264212919554, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
@@ -23706,6 +23718,7 @@ GameObject:
   - component: {fileID: 1140705092}
   - component: {fileID: 1140705091}
   - component: {fileID: 1140705093}
+  - component: {fileID: 1140705094}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -23806,9 +23819,24 @@ MonoBehaviour:
   dateUI_C: {fileID: 1611433989}
   dateUI_D: {fileID: 11712998}
   hostUI: {fileID: 427933049}
+  mainCamera: {fileID: 355014180}
   transition: {fileID: 141607644}
   transitionTime: 1
   hostMannequin: {fileID: 964303492}
+--- !u!114 &1140705094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140705087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08f66b99b5133a4aa0dcb7a52278270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionTime: 1
+  transition: {fileID: 141607644}
 --- !u!1 &1143437270
 GameObject:
   m_ObjectHideFlags: 0
@@ -24115,6 +24143,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 33258481a8f1e714b9a233ce743367f4, type: 3}
       propertyPath: m_Name
       value: Rose
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33258481a8f1e714b9a233ce743367f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25442,7 +25474,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5433683329835409336, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 11713000}
     - targetCorrespondingSourceObject: {fileID: 5329448507925080124, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
       insertIndex: -1
@@ -29099,7 +29131,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5433683329835409336, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 803578055}
     - targetCorrespondingSourceObject: {fileID: 6211797501005089021, guid: 2a6d3afa3cd7ec5408cf1a0c4d5cbaf9, type: 3}
       insertIndex: -1
@@ -34947,6 +34979,8 @@ MonoBehaviour:
   continueBtn: {fileID: 941278974}
   dialogueText: {fileID: 1250158334}
   inkJSON: {fileID: 4900000, guid: d05433cb2b14ffe4d8aa40666d313664, type: 3}
+  successInkJSON: {fileID: 0}
+  failureInkJSON: {fileID: 0}
   choices:
   - {fileID: 1574208801}
   - {fileID: 1269095868}
@@ -34965,6 +34999,8 @@ MonoBehaviour:
   VROrigin: {fileID: 1140705087}
   npc: {fileID: 935502928}
   rose: {fileID: 235784922}
+  successState: 0
+  failureState: 0
 --- !u!224 &1611433991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44377,6 +44413,8 @@ MonoBehaviour:
   continueBtn: {fileID: 510393243}
   dialogueText: {fileID: 1418500760}
   inkJSON: {fileID: 4900000, guid: ba707ae290fda7b4c96914ff79e76772, type: 3}
+  successInkJSON: {fileID: 0}
+  failureInkJSON: {fileID: 0}
   choices:
   - {fileID: 87067944}
   - {fileID: 1781601866}
@@ -44395,6 +44433,8 @@ MonoBehaviour:
   VROrigin: {fileID: 1140705087}
   npc: {fileID: 442634195}
   rose: {fileID: 235784922}
+  successState: 0
+  failureState: 0
 --- !u!224 &2054816420
 RectTransform:
   m_ObjectHideFlags: 0
