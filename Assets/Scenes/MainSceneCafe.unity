@@ -1097,6 +1097,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -1467,7 +1471,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -4906,7 +4910,7 @@ PrefabInstance:
     - target: {fileID: 7653933308471768082, guid: abc00000000003779887236029712042, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12945,7 +12949,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -15510,7 +15514,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -16252,7 +16256,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -18072,7 +18076,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -28835,7 +28839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -34030,7 +34034,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -36871,7 +36875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -39727,7 +39731,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -40333,7 +40337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -40860,7 +40864,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -43687,6 +43691,7 @@ GameObject:
   - component: {fileID: 1140705091}
   - component: {fileID: 1140705093}
   - component: {fileID: 1140705094}
+  - component: {fileID: 1140705095}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -43806,6 +43811,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionTime: 1
   transition: {fileID: 141607644}
+--- !u!114 &1140705095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140705087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1140705091}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.5
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 0
+  m_DelayTime: 0
+  m_LeftHandSnapTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: ea362d00-fac8-4a47-8082-19934646eef6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandSnapTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 0f5ea20b-e971-41bb-aff0-2b72d9c03031
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &1143437270
 GameObject:
   m_ObjectHideFlags: 0
@@ -44939,7 +44986,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -48697,7 +48744,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -50153,7 +50200,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -55930,7 +55977,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -57869,7 +57916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -59534,7 +59581,7 @@ PrefabInstance:
     - target: {fileID: 6414026014996073400, guid: abc00000000015719011778032900871, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -63262,7 +63309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -64623,7 +64670,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -65032,7 +65079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -66981,7 +67028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -68970,7 +69017,7 @@ PrefabInstance:
     - target: {fileID: 476330091894050080, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 2471769479079899702, guid: abc00000000008770911873918272329, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -72315,7 +72362,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -73706,7 +73753,7 @@ PrefabInstance:
     - target: {fileID: -4528153718443472281, guid: abc00000000016379010937912406067, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 1030974353, guid: abc00000000016379010937912406067, type: 3}
       propertyPath: m_Name
       value: Props_SM_TableNumber_6
@@ -77560,7 +77607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 315731728}
+  m_InteractionManager: {fileID: 1698679744}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -79238,7 +79285,7 @@ PrefabInstance:
     - target: {fileID: 3295263085255704715, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 315731728}
+      objectReference: {fileID: 1698679744}
     - target: {fileID: 7820323591291600342, guid: abc00000000003309920583990705351, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
