@@ -14718,6 +14718,7 @@ GameObject:
   - component: {fileID: 448977286}
   - component: {fileID: 448977288}
   - component: {fileID: 448977287}
+  - component: {fileID: 448977289}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -14783,6 +14784,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448977285}
   m_CullTransparentMesh: 1
+--- !u!114 &448977289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448977285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4173d31f8be344746bff2ecf7836550b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuBackground: {fileID: 448977287}
 --- !u!1001 &451554005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19578,6 +19592,7 @@ GameObject:
   - component: {fileID: 592577867}
   - component: {fileID: 592577869}
   - component: {fileID: 592577868}
+  - component: {fileID: 592577870}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -19643,6 +19658,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592577866}
   m_CullTransparentMesh: 1
+--- !u!114 &592577870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592577866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4173d31f8be344746bff2ecf7836550b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuBackground: {fileID: 448977287}
 --- !u!1001 &593531464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23135,6 +23163,7 @@ GameObject:
   - component: {fileID: 731833453}
   - component: {fileID: 731833455}
   - component: {fileID: 731833454}
+  - component: {fileID: 731833456}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -23200,6 +23229,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731833452}
   m_CullTransparentMesh: 1
+--- !u!114 &731833456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731833452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4173d31f8be344746bff2ecf7836550b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuBackground: {fileID: 448977287}
 --- !u!1001 &732531092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50468,6 +50510,7 @@ GameObject:
   - component: {fileID: 1453928143}
   - component: {fileID: 1453928145}
   - component: {fileID: 1453928144}
+  - component: {fileID: 1453928146}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -50533,6 +50576,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453928142}
   m_CullTransparentMesh: 1
+--- !u!114 &1453928146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453928142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4173d31f8be344746bff2ecf7836550b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuBackground: {fileID: 448977287}
 --- !u!1001 &1454809264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61501,6 +61557,66 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 592577870}
+        m_TargetAssemblyTypeName: PanelScript, Assembly-CSharp
+        m_MethodName: TransparentBackground_OnValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1453928146}
+        m_TargetAssemblyTypeName: PanelScript, Assembly-CSharp
+        m_MethodName: TransparentBackground_OnValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1890601684}
+        m_TargetAssemblyTypeName: PanelScript, Assembly-CSharp
+        m_MethodName: TransparentBackground_OnValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 731833456}
+        m_TargetAssemblyTypeName: PanelScript, Assembly-CSharp
+        m_MethodName: TransparentBackground_OnValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 448977289}
+        m_TargetAssemblyTypeName: PanelScript, Assembly-CSharp
+        m_MethodName: TransparentBackground_OnValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1001 &1785722410
 PrefabInstance:
@@ -65255,6 +65371,7 @@ GameObject:
   - component: {fileID: 1890601681}
   - component: {fileID: 1890601683}
   - component: {fileID: 1890601682}
+  - component: {fileID: 1890601684}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -65320,6 +65437,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890601680}
   m_CullTransparentMesh: 1
+--- !u!114 &1890601684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890601680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4173d31f8be344746bff2ecf7836550b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuBackground: {fileID: 448977287}
 --- !u!1001 &1891022508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70728,7 +70858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 0.2627451, g: 0, b: 0.1882353, a: 0.7058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
