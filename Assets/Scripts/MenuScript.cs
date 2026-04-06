@@ -14,7 +14,7 @@ public class MenuScript : MonoBehaviour
     public Slider slider;
     public Image menuBackground;
     public TextMeshProUGUI percentageLabel;
-    public AudioSource audioSource;
+    public AudioSource[] audioSources;
     private bool isMenuPressedDown = false;
     private bool isMuted = false;
 
@@ -38,6 +38,12 @@ public class MenuScript : MonoBehaviour
 
     void Start()
     {
+        // Ensure we have audio sources from the same object if none were explicitly assigned.
+        if (audioSources == null || audioSources.Length == 0)
+        {
+            audioSources = GetComponents<AudioSource>();
+        }
+
         // Add listener for slider value changes
         slider.onValueChanged.AddListener(UpdatePercentageLabel);
 
@@ -51,10 +57,16 @@ public class MenuScript : MonoBehaviour
         int percentage = (int)(value * 100f);
         percentageLabel.text = percentage + "%";
 
-        // Set audio source volume only if not muted
-        if (!isMuted && audioSource != null)
+        // Set audio source volumes only if not muted
+        if (!isMuted && audioSources != null)
         {
-            audioSource.volume = value;
+            foreach (var source in audioSources)
+            {
+                if (source != null)
+                {
+                    source.volume = value;
+                }
+            }
         }
     }
 
@@ -76,20 +88,30 @@ public class MenuScript : MonoBehaviour
         if (isOn)
         {
             isMuted = true;
-            if (audioSource != null)
-            {
-                audioSource.volume = 0;
-            }
+            SetAudioSourcesVolume(0f);
             slider.interactable = false;
         }
         else
         {
             isMuted = false;
-            if (audioSource != null)
-            {
-                audioSource.volume = slider.value;
-            }
+            SetAudioSourcesVolume(slider.value);
             slider.interactable = true;
+        }
+    }
+
+    private void SetAudioSourcesVolume(float volume)
+    {
+        if (audioSources == null)
+        {
+            return;
+        }
+
+        foreach (var source in audioSources)
+        {
+            if (source != null)
+            {
+                source.volume = volume;
+            }
         }
     }
 }
