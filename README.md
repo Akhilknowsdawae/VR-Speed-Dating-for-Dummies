@@ -30,4 +30,4 @@ Tutorials:
 * The ”Unity2D + Ink Dialogue System” tutorials by Shaped by Rain Studios: https://www.youtube.com/playlist?list=PL3viUl9h9k78KsDxXoAzgQ1yRjhm7p8kl 
 </details>
 
-Our final project for ITEC4106 - Virtual and Augmented Reality :)
+Our final project for ITEC4016 - Virtual and Augmented Reality :)
