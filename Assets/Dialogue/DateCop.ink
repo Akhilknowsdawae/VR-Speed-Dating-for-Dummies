@@ -4,14 +4,14 @@ INCLUDE Globals.ink
 So... just making conversation here... you haven’t happened to see any suspicious individuals?
 Maybe tall, dramatic... possibly evil?
 + [Nope.]
-~dateBScore++
+~dateCopScore++
 #anim1
 -- Good. That’s good. Because I am definitely not conducting any sort of investigation.
 -- Just a regular civilian enjoying beverages.
 ->Round2
 
 + [Why are you asking?]
-~dateBScore--
+~dateCopScore--
 #anim2
 -- Why? I- what? No reason.
 #anim1
@@ -19,8 +19,8 @@ Maybe tall, dramatic... possibly evil?
 ->Round2
 
 ==Round2
-+ [You’re a cop.]
-~dateBScore--
++ [I don't help cops.]
+~dateCopScore--
 #anim3
 -- Haha! No badge, no paperwork, no authority whatsoever.
 #anim1
@@ -28,20 +28,20 @@ Maybe tall, dramatic... possibly evil?
 -> Round3
 
 + [I might’ve seen someone...]
-~dateBScore++
+~dateCopScore++
 #anim1
 --  Describe them. Slowly. With detail.
 -> Round3
 
 ==Round3
-+ [Dramatic. Evil laugh.]
-~dateBScore++
++ [He was dramatic. Evil laugh.]
+~dateCopScore++
 #anim4
 -- That’s EXACTLY who I’m-  I mean... who I’ve heard about.
 -> Proceed
 
 + [Never mind.]
-~dateBScore--
+~dateCopScore--
 #anim2
 -- You’re withholding information. That’s... suspicious.
 -> Proceed
@@ -49,5 +49,5 @@ Maybe tall, dramatic... possibly evil?
 ==Proceed
 #anim1
 -- Thank you, civ- er, friend. Run along now.
-#goToDateC
+#goToDateJapanese
 ->END

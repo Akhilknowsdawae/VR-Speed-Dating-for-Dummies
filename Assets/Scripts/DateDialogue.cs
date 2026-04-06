@@ -111,7 +111,7 @@ public class DateDialogue : MonoBehaviour
 
             switch (tag) {
 
-                case "goToDateA":
+                case "goToDateJob":
             
                     Debug.Log("Going to first date!");
                     if(VROrigin != null)
@@ -125,7 +125,7 @@ public class DateDialogue : MonoBehaviour
                     }
                     break;
 
-                case "goToDateB":
+                case "goToDateVillain":
             
                     Debug.Log("Going to second date!");
                     if (VROrigin != null)
@@ -139,7 +139,7 @@ public class DateDialogue : MonoBehaviour
                     }
                     break;
 
-                case "goToDateC":
+                case "goToDateCop":
                     Debug.Log("Going to third date!");
                     if (VROrigin != null)
                     {
@@ -153,7 +153,7 @@ public class DateDialogue : MonoBehaviour
                     }
                     break;
 
-                case "goToDateD":
+                case "goToDateJapanese":
                     Debug.Log("Going to fourth date!");
                     if (VROrigin != null)
                     {

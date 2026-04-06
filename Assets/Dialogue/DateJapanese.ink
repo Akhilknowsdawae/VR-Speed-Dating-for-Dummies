@@ -4,40 +4,40 @@ INCLUDE Globals.ink
 はじめまして！今日はいい天気ですね。
 
 + [こんにちは！]
-~dateDScore++
+~dateJapaneseScore++
 #anim1
 -- おお！日本語が話せるんですね！
 ->Round2
 
 + [I don’t understand...]
-~dateDScore--
+~dateJapaneseScore--
 #anim1
 -- えっ？
 ->Round2
 
 ==Round2
 + [*Gesture politely*]
-~dateDScore++
+~dateJapaneseScore++
 #anim3
 -- いいですね！楽しい！
 ->Round3
 
 + [Uh, English?]
 #anim1
-~dateDScore--
+~dateJapaneseScore--
 -- ...Hello. Coffee good?
 ->Round3
 
 
 ==Round3
 + [*Smile and nod*]
-~dateDScore++
+~dateJapaneseScore++
 #anim3
 --楽しかったです！
 ->Proceed
 
 + [*Panic*]
-~dateDScore--
+~dateJapaneseScore--
 #anim2
 --大丈夫ですか？！
 ->Proceed

@@ -3,7 +3,7 @@ INCLUDE Globals.ink
 {hostIntroComplete: ->Ending | ->Intro}
 
 ==Intro
-Welcome to our cafe's new Speed-Dating Event!
+Welcome to "Speed Dating for Dummies", our cafe's new Speed-Dating Event!
 Today you will get to meet four lovely eligible dates.
 Aren't you excited?
 
@@ -18,7 +18,7 @@ Aren't you excited?
 == Proceed
 Now, grab a coffee, be charming, and have fun!
 ~hostIntroComplete = true
-#goToDateA
+#goToDateJob
 ->DONE
 
 ==Ending

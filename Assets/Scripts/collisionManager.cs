@@ -29,9 +29,9 @@ public class collisionManager : MonoBehaviour
             int score;
             if (usingUI.name == "Date UI A")
             {                
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateAScore")).value;
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateJobScore")).value;
                 Debug.Log("Date Score is: " + score);
-                if (score <= 0)
+                if (score < 0)
                     ddScript.failureState = true;
                 else
                     ddScript.successState = true;
@@ -39,9 +39,9 @@ public class collisionManager : MonoBehaviour
             }
             else if (usingUI.name == "Date UI B")
             {
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateBScore")).value; 
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateVillainScore")).value; 
                 Debug.Log("Date Score is: " + score);
-                if (score <= 0)
+                if (score < 0)
                     ddScript.failureState = true;
                 else
                     ddScript.successState = true;
@@ -49,9 +49,9 @@ public class collisionManager : MonoBehaviour
             }
             else if (usingUI.name == "Date UI C")
             {
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateCScore")).value; 
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateCopScore")).value; 
                 Debug.Log("Date Score is: " + score);
-                if (score <= 0)
+                if (score < 0)
                     ddScript.failureState = true;
                 else
                     ddScript.successState = true;
@@ -59,9 +59,9 @@ public class collisionManager : MonoBehaviour
             }
             else if (ddScript.name == "Date UI D")
             {
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateDScore")).value; 
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateJapaneseScore")).value; 
                 Debug.Log("Date Score is: " + score);
-                if (score <= 0)
+                if (score < 0)
                     ddScript.failureState = true;
                 else
                     ddScript.successState = true;

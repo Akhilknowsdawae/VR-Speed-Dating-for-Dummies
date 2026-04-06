@@ -97,12 +97,12 @@ public class DateTriggers : MonoBehaviour
                 newRot = 270f;
                 activeUI = dateUI_B;
                 break;
-            case 3:
+            case 4:
                 newPos = new Vector3(3.21f, -6.69899988f, -3.93f);
                 newRot = 90f;
                 activeUI = dateUI_C;
                 break;
-            case 4:
+            case 3:
                 newPos = new Vector3(-0.84f, -6.69899988f, -3.91f);
                 newRot = 270f;
                 activeUI = dateUI_D;
