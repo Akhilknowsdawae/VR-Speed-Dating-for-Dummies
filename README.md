@@ -1,5 +1,7 @@
 # VR Speed Dating for Dummies!
+
 In this VR experience, meet 4 lovely eligible bachelors in a cozy cafe. 
+
 <img width="923" height="313" alt="image" src="https://github.com/user-attachments/assets/d6ea3ca7-1dab-47f8-bdc2-4adf9ce2bd26" />
 
 Sip a coffee and get to know your lovely date - who knows if love will bloom?
