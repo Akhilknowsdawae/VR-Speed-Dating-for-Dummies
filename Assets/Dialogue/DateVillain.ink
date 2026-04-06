@@ -49,6 +49,5 @@ INCLUDE Globals.ink
 #anim1
 -- Soon. Soon you will learn of my machinations.
 -- Until then... Anticipate me!
--- Debug! Score is {dateCScore}!
 #goToDateD
 ->END

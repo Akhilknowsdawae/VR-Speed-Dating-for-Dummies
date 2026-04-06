@@ -45,6 +45,6 @@ INCLUDE Globals.ink
 
 ==Proceed
 #anim1
--- Debug! Score is {dateDScore}!
+ジャー、また！
 #goToHost
 ->END

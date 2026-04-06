@@ -49,6 +49,5 @@ Maybe tall, dramatic... possibly evil?
 ==Proceed
 #anim1
 -- Thank you, civ- er, friend. Run along now.
--- Debug! Score is {dateBScore}!
 #goToDateC
 ->END

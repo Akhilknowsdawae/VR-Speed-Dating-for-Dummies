@@ -55,6 +55,5 @@ Thank you for taking the time to meet with me today. I believe I’d be an excel
 #anim1
 -- Thank you for taking the time to meet with me today.
 -- I hope your other meetings are as informative as this one.
--- Debug! Score is {dateAScore}!
 #goToDateB
 ->END

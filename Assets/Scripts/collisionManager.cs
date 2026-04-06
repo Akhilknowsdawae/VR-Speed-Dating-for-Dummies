@@ -36,7 +36,7 @@ public class collisionManager : MonoBehaviour
             }
             else if (usingUI.name == "Date UI B")
             {
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateScoreB")).value; 
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateBScore")).value; 
                 Debug.Log("Date Score is: " + score);
                 if (score <= 0)
                     ddScript.failureState = true;
@@ -46,7 +46,7 @@ public class collisionManager : MonoBehaviour
             }
             else if (usingUI.name == "Date UI C")
             {
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateScoreC")).value; 
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateCScore")).value; 
                 Debug.Log("Date Score is: " + score);
                 if (score <= 0)
                     ddScript.failureState = true;
@@ -56,7 +56,7 @@ public class collisionManager : MonoBehaviour
             }
             else if (ddScript.name == "Date UI D")
             {
-                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateScoreD")).value; 
+                score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateDScore")).value; 
                 Debug.Log("Date Score is: " + score);
                 if (score <= 0)
                     ddScript.failureState = true;
