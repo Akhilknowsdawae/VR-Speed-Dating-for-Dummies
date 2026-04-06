@@ -27,6 +27,8 @@ public class DateDialogue : MonoBehaviour
     [SerializeField] public GameObject VROrigin;
     [SerializeField] private GameObject npc;
     [SerializeField] private GameObject rose;
+    [SerializeField] private GameObject failUI;
+    [SerializeField] private GameObject successUI;
     public bool successState;
     public bool failureState;
 
@@ -35,6 +37,8 @@ public class DateDialogue : MonoBehaviour
     {
         successState = false;
         failureState = false;
+        failUI.SetActive(false);
+        successUI.SetActive(false);
         StartDialogue();
 
         //choicesText = new TextMeshProUGUI[choices.Length];
@@ -191,11 +195,19 @@ public class DateDialogue : MonoBehaviour
                 
                 case "failure":
                     Debug.Log("Trigger Failure!");
-                    VROrigin.GetComponent<LevelManager>().GoToFailureScene();
+                    //VROrigin.GetComponent<LevelManager>().GoToFailureScene();
+                    VROrigin.gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                    VROrigin.gameObject.transform.Translate(5.819f, 16.25f, -1.15f, Space.World);
+                    VROrigin.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                    failUI.SetActive(true);
                     break;
 
                 case "success":
-                    VROrigin.GetComponent<LevelManager>().GoToSuccessScene();
+                    //VROrigin.GetComponent<LevelManager>().GoToSuccessScene();
+                    VROrigin.gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                    VROrigin.gameObject.transform.Translate(5.819f, 16.25f, -1.15f, Space.World);
+                    VROrigin.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                    successUI.SetActive(true);
                     break;
             }
         }
