@@ -14,6 +14,7 @@ public class DateTriggers : MonoBehaviour
     public GameObject dateUI_C;
     public GameObject dateUI_D;
     public GameObject hostUI;
+    public GameObject mainCamera;
 
     public Animator transition;
     public float transitionTime = 1f;
@@ -26,8 +27,17 @@ public class DateTriggers : MonoBehaviour
         teleportSpots.SetActive(false);
         dateUI_A.SetActive(false);
         dateUI_B.SetActive(false);
+        dateUI_C.SetActive(false);
+        dateUI_D.SetActive(false);
         activeUI = hostUI;
-        GoToDate(0); //for testing TODO
+
+        //start at host
+        activeUI = hostUI;
+        hostMannequin.SetActive(true);
+        gameObject.transform.position = new Vector3(0f, 0f, 0f);
+        mainCamera.transform.position = new Vector3(0f, 0f, 0f);
+        gameObject.transform.Translate(-2.5f, -6.4f, 0f, Space.World);
+        transform.rotation = Quaternion.Euler(0f, 150f, 0f);
 
         //int dateAScore = ((Ink.Runtime.IntValue)dateUI_A.GetComponent<DateDialogue>().GetVariableState("dateAScore")).value;
         //Debug.LogError("DATE A SCORE IS " + dateAScore);
@@ -83,7 +93,7 @@ public class DateTriggers : MonoBehaviour
                 break;
 
             case 2:
-                newPos = new Vector3(5.5f, -6.69899988f, 3.78800011f);
+                newPos = new Vector3(5.1f, -6.69899988f, 3.79f);
                 newRot = 270f;
                 activeUI = dateUI_B;
                 break;
@@ -117,8 +127,11 @@ public class DateTriggers : MonoBehaviour
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
-        transform.position = new Vector3(0, 0, 0);
-        transform.position += newPos;
+        //Debug.Log("new pos is" + newPos);
+        gameObject.transform.position = new Vector3(0f, 0f, 0f);
+        mainCamera.transform.position = new Vector3(0f, 0f, 0f);
+        //Debug.Log("Is it zeroed? Is: " +gameObject.transform.position); 
+        gameObject.transform.Translate(newPos, Space.World);
         transform.rotation = Quaternion.Euler(0f, newRot, 0f);
         //transform.rotation += newRot;
         if (activeUI != null)
