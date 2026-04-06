@@ -5,6 +5,7 @@ using UnityEngine;
 public class collisionManager : MonoBehaviour
 {
     [SerializeField] private GameObject rose;
+    [SerializeField] private GameObject UI_self;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,20 +13,22 @@ public class collisionManager : MonoBehaviour
         {
             Debug.Log(gameObject.name + " was hit by coffee! ");
             other.gameObject.SetActive(false);
-            GameObject usingUI = gameObject.transform.GetChild(0).gameObject;
-            DateDialogue ddScript = usingUI.GetComponent<DateDialogue>();
-            ddScript.dialogueText.text = "Ouch! That coffee is hot!";
+            GameObject usingUI = UI_self;
+            if (usingUI != null)
+            {
+                DateDialogue ddScript = usingUI.GetComponent<DateDialogue>();
+                ddScript.dialogueText.text = "Ouch! That coffee is hot!";
+            }
         }
         if (other.gameObject == rose)
         {
             Debug.Log(gameObject.name + " was hit by rose! ");
             rose.SetActive(false);
-            GameObject usingUI = gameObject.transform.GetChild(0).gameObject;
+            GameObject usingUI = UI_self;
             DateDialogue ddScript = usingUI.GetComponent<DateDialogue>();
             int score;
             if (usingUI.name == "Date UI A")
-            {
-                
+            {                
                 score = ((Ink.Runtime.IntValue)ddScript.GetVariableState("dateAScore")).value;
                 Debug.Log("Date Score is: " + score);
                 if (score <= 0)
