@@ -69,6 +69,10 @@ public class DateTriggers : MonoBehaviour
     {
         GoToDate(0);
     }
+    public void GoToOutcome()
+    {
+        GoToDate(-1);
+    }
 
     private void GoToDate(int idx)
     {
@@ -87,25 +91,35 @@ public class DateTriggers : MonoBehaviour
         switch (idx)
         {
             case 1:
+                //Job
                 newPos = new Vector3(-1.45299995f, -6.69899988f, 3.78800011f);
                 newRot = 90f;
                 activeUI = dateUI_A;
                 break;
 
             case 2:
+                //Villian
                 newPos = new Vector3(5.1f, -6.69899988f, 3.79f);
                 newRot = 270f;
                 activeUI = dateUI_B;
                 break;
             case 4:
+                //Japanese
                 newPos = new Vector3(3.21f, -6.69899988f, -3.93f);
                 newRot = 90f;
                 activeUI = dateUI_C;
                 break;
             case 3:
+                //Cop
                 newPos = new Vector3(-0.84f, -6.69899988f, -3.91f);
                 newRot = 270f;
                 activeUI = dateUI_D;
+                break;
+            case -1:
+                //Success or fail
+                newPos = new Vector3(5.819f, 16.25f, -1.15f);
+                newRot = 0f;
+                activeUI = null;
                 break;
             default:
                 Debug.Log("Idx invalid, returning to host.");

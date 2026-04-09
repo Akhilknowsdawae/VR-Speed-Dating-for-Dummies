@@ -29,14 +29,14 @@ public class DateDialogue : MonoBehaviour
     [SerializeField] private GameObject rose;
     [SerializeField] private GameObject failUI;
     [SerializeField] private GameObject successUI;
-    public bool successState;
-    public bool failureState;
+    public bool successState = false;
+    public bool failureState = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        successState = false;
-        failureState = false;
+        //successState = false;
+        //failureState = false;
         failUI.SetActive(false);
         successUI.SetActive(false);
         StartDialogue();
@@ -63,10 +63,16 @@ public class DateDialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        if(successState)
+        if (successState)
+        {
             currentStory = new Story(successInkJSON.text);
-        else if(failureState)
+            Debug.Log("This is a success!");
+        }
+        else if (failureState)
+        {
             currentStory = new Story(failureInkJSON.text);
+            Debug.Log("This is a failure!");
+        }
         else currentStory = new Story(inkJSON.text);
         dialoguePanel.SetActive(true);
 
@@ -195,19 +201,23 @@ public class DateDialogue : MonoBehaviour
                 
                 case "failure":
                     Debug.Log("Trigger Failure!");
-                    //VROrigin.GetComponent<LevelManager>().GoToFailureScene();
-                    VROrigin.gameObject.transform.position = new Vector3(0f, 0f, 0f);
-                    VROrigin.gameObject.transform.Translate(5.819f, 16.25f, -1.15f, Space.World);
-                    VROrigin.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                    ////VROrigin.GetComponent<LevelManager>().GoToFailureScene();
+                    //VROrigin.gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                    //VROrigin.gameObject.transform.Translate(5.819f, 16.25f, -1.15f, Space.World);
+                    //VROrigin.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                     failUI.SetActive(true);
+                    successUI.SetActive(false);
+                    VROrigin.GetComponent<DateTriggers>().GoToOutcome();
                     break;
 
                 case "success":
-                    //VROrigin.GetComponent<LevelManager>().GoToSuccessScene();
-                    VROrigin.gameObject.transform.position = new Vector3(0f, 0f, 0f);
-                    VROrigin.gameObject.transform.Translate(5.819f, 16.25f, -1.15f, Space.World);
-                    VROrigin.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                    ////VROrigin.GetComponent<LevelManager>().GoToSuccessScene();
+                    //VROrigin.gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                    //VROrigin.gameObject.transform.Translate(5.819f, 16.25f, -1.15f, Space.World);
+                    //VROrigin.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                     successUI.SetActive(true);
+                    failUI.SetActive(false);
+                    VROrigin.GetComponent<DateTriggers>().GoToOutcome();
                     break;
             }
         }
