@@ -23,6 +23,7 @@ Models:
 * “Selected U3D Japanese Font” (https://assetstore.unity.com/packages/2d/fonts/selected-u3d-japanese-font-337)
 * “Low Poly Flower Pack” (https://assetstore.unity.com/packages/3d/vegetation/flowers/demo-low-poly-flower-pack-325074)
 * “Free Food - Breakfast Time” (https://assetstore.unity.com/packages/3d/props/food/free-food-breakfast-time-252878)  
+* “12 Porcelain Vessels Pack” (https://assetstore.unity.com/packages/3d/props/12-porcelain-vessels-pack-low-poly-flower-pots-322896)
 
 Music:
 * Hoshi To Bokura To (Jazz Cover) | The Consouls Hoshi To Bokura To (Persona 5) Jazz Cover - The Consouls
